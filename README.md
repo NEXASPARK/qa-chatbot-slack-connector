@@ -37,20 +37,22 @@ gcloud config set project agent-apply-management
 
 ```
 
-### 手動でDockerイメージをビルド・デプロイする場合
+### Dockerイメージをビルド・デプロイする
 
 ```bash
 # Docker buildxを使用してマルチプラットフォーム対応のイメージをビルド・プッシュ
 docker buildx build --platform linux/amd64 -t gcr.io/agent-apply-management/qa-chatbot-slack-connector . --push
+```
 
-
-# 環境変数を設定
+### 環境変数を設定
 
 以下を参照してください。
 
 https://github.com/NEXASPARK/Secret/blob/main/%E7%92%B0%E5%A2%83%E5%A4%89%E6%95%B0/qa-chatbot-slack-connector.md
 
-# Cloud Runにデプロイ（環境変数を設定）
+### Cloud Runにデプロイ（環境変数を設定）
+
+```
 gcloud run deploy qa-chatbot-slack-connector \
   --image gcr.io/agent-apply-management/qa-chatbot-slack-connector \
   --region asia-northeast1 \
