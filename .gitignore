@@ -26,7 +26,6 @@ coverage/
 .nyc_output
 
 # 依存関係ロックファイル
-package-lock.json
 yarn.lock
 
 # エディタ設定
